@@ -8,269 +8,118 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Recipe page</title>
+  <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     * {
       margin: 0;
       padding: 0;
-      color: rgb(45, 45, 45);
+      background-color: #F5D04E;
+      font-family: "Figtree", sans-serif;
     }
 
     body {
       display: flex;
-      align-items: center;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100vw;
       height: 100vh;
-      background-color: rgb(255, 228, 205);
-      padding-top: 70px;
     }
 
     .container {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      padding: 30px;
-      min-width: 350px;
-      max-width: 50%;
+      padding: 25px;
+      border: 1px solid black;
+      width: 400px;
+      min-width: 320px;
+      border-radius: 20px;
       background-color: white;
-      border-radius: 25px;
-    }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-        min-width: 350px;
-        max-width: 60%;
-        background-color: white;
-      }
-
-    }
-
-    @media screen and (max-width: 450px) {
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-        min-width: 300px;
-        max-width: 60%;
-        background-color: white;
-      }
-
-    }
-
-    li {
-      padding: 5px 0px;
+      box-shadow: 15px 15px;
     }
 
     .container img {
-      border-radius: 20px;
       width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #F5D04E;
+      width: 110px;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 800;
+      margin: 10px 0px;
+    }
+
+    .container p {
+      font-weight: 500;
+      background-color: white;
+      margin: 10px 0px;
+    }
+
+    .container h1 {
+      background-color: white;
+      color: #F5D04E;
+      margin: 15px 0px;
+    }
+
+    .container h1:hover {
+      cursor: pointer;
     }
 
     .container .content {
-      margin-top: 25px;
+      font-size: 20px;
+      color: #909090;
     }
 
-    .container .content .title {
-      font-family: "Young Serif", serif;
-      font-size: 210%;
-      color: black;
+    .container .username {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0px 0px 0px;
     }
 
-    .container .content p {
-      font-family: "outfit";
-      margin-top: 10px;
-      margin-bottom: 30px;
+    .container .username img {
+      border-radius: 100px;
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
     }
 
-    .container .content .preparation {
-      padding: 25px;
-      font-family: "outfit";
-      background-color: rgb(255, 241, 229);
-    }
-
-    .container .content .preparation h3 {
-      font-size: larger;
-      color: #800000;
-    }
-
-    .container .content .preparation ul {
-      padding-left: 20px;
-      padding-top: 5px;
-    }
-
-    .container .content .ingredients {
-      margin: 25px;
-    }
-
-    .container .content .ingredients h2 {
-      font-family: "young serif";
-      font-weight: 200;
-      font-size: 185%;
-      color: #800000;
-    }
-
-    .container .content .ingredients ul {
-      font-family: "outfit";
-      padding-left: 20px;
-      padding-top: 5px;
-    }
-
-    .container .content .ingredients ul li::marker {
-      color: #800000;
-    }
-
-    .container .content .instructions {
-      margin: 25px;
-    }
-
-    .container .content .instructions h2 {
-      font-family: "young serif";
-      font-weight: 200;
-      font-size: 185%;
-      color: #800000;
-    }
-
-    .container .content .instructions ol {
-      font-family: "outfit";
-      padding-left: 20px;
-      padding-top: 5px;
-    }
-
-    .container .content .instructions ol li::marker {
-      color: #800000;
-    }
-
-    .container .content .nutrition {
-      margin: 25px;
-    }
-
-    .container .content .nutrition h2 {
-      font-family: "young serif";
-      font-weight: 200;
-      font-size: 185%;
-      color: #800000;
-    }
-
-    .container .content .nutrition table {
-      font-family: "outfit";
-      width: 100%;
-      padding-left: 20px;
-    }
-
-    tr {
-      display: table;
-      width: 100%;
-      border-bottom: 1px solid rgb(185, 185, 185);
-    }
-
-    tr td {
-      width: 50%;
-      padding: 10px 0px;
-    }
-
-    .values {
-      font-weight: 700;
-      color: #800000;
+    .container .username p {
+      font-weight: 900;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <img src="./assets/images/image-omelette.jpeg" alt="Error">
-    <div class="content">
-      <h1 class="title">Simple Omelette Recipe</h1>
-      <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
-        to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
-      <div class="preparation">
-        <h3>Preparation time</h3>
-        <ul>
-          <li style="padding-left:1em"><strong>Total:</strong> Approximately 10 minutes</li>
-          <li style="padding-left:1em"><strong>Preparation:</strong> 5 minutes</li>
-          <li style="padding-left:1em"><strong>Cooking:</strong> 5 minutes</li>
-        </ul>
-      </div>
-      <div class="ingredients">
-        <h2>Ingredients</h2>
-        <ul>
-          <li style="padding-left:1em">2-3 large eggs</li>
-          <li style="padding-left:1em">Salt, to taste</li>
-          <li style="padding-left:1em">Pepper, to taste</li>
-          <li style="padding-left:1em">1 tablespoon of butter or oil</li>
-          <li style="padding-left:1em">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
-        </ul>
-      </div>
+    <img src="./assets/images/illustration-article.svg" alt="">
+    <button>Learning</button>
 
-      <hr>
-
-      <div class="instructions">
-        <h2>Instructions</h2>
-        <ol>
-          <li style="padding-left:1em"><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and
-            pepper until they are
-            well mixed.
-            You can add a tablespoon of water or milk for a fluffier texture.</li>
-          <li style="padding-left:1em"><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and
-            add butter or oil.</li>
-          <li style="padding-left:1em"><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour
-            in the eggs. Tilt the pan
-            to ensure
-            the eggs evenly coat the surface.</li>
-          <li style="padding-left:1em"><strong>Add fillings (optional)</strong>: When the eggs begin to set at the edges
-            but are still slightly
-            runny in the
-            middle, sprinkle your chosen fillings over one half of the omelette.</li>
-          <li style="padding-left:1em"><strong>Fold and serve:</strong> As the omelette continues to cook, carefully
-            lift one edge and fold it
-            over the
-            fillings. Let it cook for another minute, then slide it onto a plate.</li>
-          <li style="padding-left:1em"><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
-          </li>
-        </ol>
-      </div>
-      <hr>
-      <div class="nutrition">
-        <h2>Nutrition</h2>
-        <p>The table below shows nutritional values per serving without the additional fillings.</p>
-        <table>
-          <tr>
-            <td>Calories</td>
-            <td class="values">277kcal</td>
-          </tr>
-          <tr>
-            <td>Carbs</td>
-            <td class="values">0g</td>
-          </tr>
-          <tr>
-            <td>Protein</td>
-            <td class="values">20g</td>
-          </tr>
-          <tr>
-            <td>Fat</td>
-            <td class="values">22g</td>
-          </tr>
-        </table>
-      </div>
-
+    <p>Published 21 Dec 2023</p>
+    <h1>
+      HTML & CSS foundations
+    </h1>
+    <p class="content">
+      These languages are the backbone of every website, defining structure, content, and presentation.
+    </p>
+    <div class="username">
+      <img src="./assets/images/image-avatar.webp" alt="">
+      <p>Greg Hooper</p>
     </div>
   </div>
-
 
 </body>
 
